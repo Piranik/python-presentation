@@ -1,0 +1,93 @@
+Python is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991. An interpreted language, Python has a design philosophy which emphasizes code readability (notably using whitespace indentation to delimit code blocks rather than curly braces or keywords), and a syntax which allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.[22][23] The language provides constructs intended to enable writing clear programs on both a small and large scale.[24]
+
+Python features a dynamic type system and automatic memory management and supports multiple programming paradigms, including object-oriented, imperative, functional programming, and procedural styles. It has a large and comprehensive standard library.[25]
+
+Python interpreters are available for many operating systems, allowing Python code to run on a wide variety of systems. CPython, the reference implementation of Python, is open source software[26] and has a community-based development model, as do nearly all of its variant implementations. CPython is managed by the non-profit Python Software Foundation.
+
+Python was conceived in the late 1980s,[27] and its implementation began in December 1989[28] by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to the ABC language (itself inspired by SETL)[29] capable of exception handling and interfacing with the operating system Amoeba.[6] Van Rossum is Python's principal author, and his continuing central role in deciding the direction of Python is reflected in the title given to him by the Python community, benevolent dictator for life (BDFL).
+
+About the origin of Python, Van Rossum wrote in 1996:[30]
+
+Over six years ago, in December 1989, I was looking for a "hobby" programming project that would keep me occupied during the week around Christmas. My office ... would be closed, but I had a home computer, and not much else on my hands. I decided to write an interpreter for the new scripting language I had been thinking about lately: a descendant of ABC that would appeal to Unix/C hackers. I chose Python as a working title for the project, being in a slightly irreverent mood (and a big fan of Monty Python's Flying Circus).
+
+Python 2.0 was released on 16 October 2000 and had many major new features, including a cycle-detecting garbage collector and support for Unicode. With this release the development process was changed and became more transparent and community-backed.[31]
+
+Python 3.0 (which early in its development was commonly referred to as Python 3000 or py3k), a major, backwards-incompatible release, was released on 3 December 2008[32] after a long period of testing. Many of its major features have been backported to the backwards-compatible Python 2.6.x[33] and 2.7.x version series.
+
+The End Of Life date (EOL, sunset date) for Python 2.7 was initially set at 2015, then postponed to 2020 out of concern that a large body of existing code cannot easily be forward-ported to Python 3.[34][35] In January 2017 Google announced work on a Python 2.7 to Go transcompiler, which The Register speculated was in response to Python 2.7's planned end-of-life[36] but Google cited performance under concurrent workloads as their only motivation.[37]
+
+Python is a multi-paradigm programming language: object-oriented programming and structured programming are fully supported, and many language features support functional programming and aspect-oriented programming (including by metaprogramming[38] and metaobjects (magic methods)).[39] Many other paradigms are supported via extensions, including design by contract[40][41] and logic programming.[42]
+
+Python uses dynamic typing and a mix of reference counting and a cycle-detecting garbage collector for memory management. An important feature of Python is dynamic name resolution (late binding), which binds method and variable names during program execution.
+
+The design of Python offers some support for functional programming in the Lisp tradition. The language has map(), reduce() and filter() functions; list comprehensions, dictionaries, and sets; and generator expressions.[43] The standard library has two modules (itertools and functools) that implement functional tools borrowed from Haskell and Standard ML.[44]
+
+The core philosophy of the language is summarized by the document The Zen of Python (PEP 20), which includes aphorisms such as:[45]
+
+Beautiful is better than ugly
+Explicit is better than implicit
+Simple is better than complex
+Complex is better than complicated
+Readability counts
+Rather than requiring all desired functionality to be built into the language's core, Python was designed to be highly extensible. Python can also be embedded in existing applications that need a programmable interface. This design of a small core language with a large standard library and an easily extensible interpreter was intended by Van Rossum from the start because of his frustrations with ABC, which espoused the opposite mindset.[27]
+
+While offering choice in coding methodology, the Python philosophy rejects exuberant syntax, such as in Perl, in favor of a sparser, less-cluttered grammar. As Alex Martelli put it: "To describe something as clever is not considered a compliment in the Python culture."[46] Python's philosophy rejects the Perl "there is more than one way to do it" approach to language design in favor of "there should be one—and preferably only one—obvious way to do it".[45]
+
+Python's developers strive to avoid premature optimization, and moreover, reject patches to non-critical parts of CPython that would offer a marginal increase in speed at the cost of clarity.[47] When speed is important, a Python programmer can move time-critical functions to extension modules written in languages such as C, or try using PyPy, a just-in-time compiler. Cython is also available, which translates a Python script into C and makes direct C-level API calls into the Python interpreter.
+
+An important goal of Python's developers is making it fun to use. This is reflected in the origin of the name, which comes from Monty Python,[48] and in an occasionally playful approach to tutorials and reference materials, such as using examples that refer to spam and eggs instead of the standard foo and bar.[49][50]
+
+A common neologism in the Python community is pythonic, which can have a wide range of meanings related to program style. To say that code is pythonic is to say that it uses Python idioms well, that it is natural or shows fluency in the language, that it conforms with Python's minimalist philosophy and emphasis on readability. In contrast, code that is difficult to understand or reads like a rough transcription from another programming language is called unpythonic.
+
+Users and admirers of Python, especially those considered knowledgeable or experienced, are often referred to as Pythonists, Pythonistas, and Pythoneers.
+
+Rounding towards negative infinity, though different from most languages, adds consistency. For instance, it means that the equation (a+b) // b == a // b + 1 is always true. It also means that the equation b * (a // b) + a % b == a is valid for both positive and negative values of a. However, maintaining the validity of this equation means that while the result of a % b is, as expected, in the half-open interval [0, b), where b is a positive integer, it has to lie in the interval (b, 0] when b is negative.[73]
+
+Python provides a round function for rounding a float to the nearest integer. For tie-breaking, versions before 3 use round-away-from-zero: round(0.5) is 1.0, round(-0.5) is −1.0.[74] Python 3 uses round to even: round(1.5) is 2, round(2.5) is 2.[75]
+
+Python allows boolean expressions with multiple equality relations in a manner that is consistent with general use in mathematics. For example, the expression a < b < c tests whether a is less than b and b is less than c. C-derived languages interpret this expression differently: in C, the expression would first evaluate a < b, resulting in 0 or 1, and that result would then be compared with c.[76][page needed]
+
+Python has extensive built-in support for arbitrary precision arithmetic. Integers are transparently switched from the machine-supported maximum fixed-precision (usually 32 or 64 bits), belonging to the python type int, to arbitrary precision, belonging to the python type long, where needed. The latter have an "L" suffix in their textual representation.[77] (In Python 3, the distinction between the int and long types was eliminated; this behavior is now entirely contained by the int class.) The Decimal type/class in module decimal (since version 2.4) provides decimal floating point numbers to arbitrary precision and several rounding modes.[78] The Fraction type in module fractions (since version 2.6) provides arbitrary precision for rational numbers.[79]
+
+Due to Python's extensive mathematics library, and the third-party library NumPy which further extends the native capabilities, it is frequently used as a scientific scripting language to aid in problems such as numerical data processing and manipulation.
+
+Python has a large standard library, commonly cited as one of Python's greatest strengths,[80] providing tools suited to many tasks. This is deliberate and has been described as a "batteries included"[25] Python philosophy. For Internet-facing applications, many standard formats and protocols (such as MIME and HTTP) are supported. Modules for creating graphical user interfaces, connecting to relational databases, generating pseudorandom numbers, arithmetic with arbitrary precision decimals,[81] manipulating regular expressions, and doing unit testing are also included.
+
+Some parts of the standard library are covered by specifications (for example, the Web Server Gateway Interface (WSGI) implementation wsgiref follows PEP 333[82]), but most modules are not. They are specified by their code, internal documentation, and test suites (if supplied). However, because most of the standard library is cross-platform Python code, only a few modules need altering or rewriting for variant implementations.
+
+As of November, 2016, the Python Package Index, the official repository containing third-party software for Python, contains over 92,000[83] packages offering a wide range of functionality, including:
+
+graphical user interfaces, web frameworks, multimedia, databases, networking and communications
+test frameworks, automation and web scraping, documentation tools, system administration
+scientific computing, text processing, image processing
+Some libraries that are for different languages, such as SFML, have bindings that are available for Python.[84]
+
+Most Python implementations (including CPython) include a read–eval–print loop (REPL), meaning they can function as a command line interpreter, for which the user enters statements sequentially and receives the results immediately.
+
+Other shells add abilities beyond those in the basic interpreter, including IDLE and IPython. While generally following the visual style of the Python shell, they implement features like auto-completion, session state retention, and syntax highlighting.
+
+In addition to standard desktop integrated development environments (Python IDEs), there are also web browser-based IDEs, SageMath (intended for developing science and math-related Python programs), and a browser-based IDE and hosting environment, PythonAnywhere. Additionally, the Canopy IDE is also an option for writing Python programs.[85]
+
+Since 2003, Python has consistently ranked in the top ten most popular programming languages as measured by the TIOBE Programming Community Index. As of March 2017, it is the fifth most popular language.[107] It was ranked as Programming Language of the Year for the year 2007 and 2010.[108] It is the third most popular language whose grammatical syntax is not predominantly based on C, e.g. C++, Objective-C (note, C# and Java only have partial syntactic similarity to C, such as the use of curly braces, and are closer in similarity to each other than C).
+
+An empirical study found scripting languages (such as Python) more productive than conventional languages (such as C and Java) for a programming problem involving string manipulation and search in a dictionary. Memory consumption was often "better than Java and not much worse than C or C++".[109]
+
+Large organizations that make use of Python include Wikipedia, Google,[110] Yahoo!,[111] CERN,[112] NASA,[113] and some smaller entities like ILM,[114] and ITA.[115] The social news networking site Reddit is written entirely in Python.
+
+Python can serve as a scripting language for web applications, e.g., via mod_wsgi for the Apache web server.[116] With Web Server Gateway Interface, a standard API has evolved to facilitate these applications. Web frameworks like Django, Pylons, Pyramid, TurboGears, web2py, Tornado, Flask, Bottle and Zope support developers in the design and maintenance of complex applications. Pyjamas and IronPython can be used to develop the client-side of Ajax-based applications. SQLAlchemy can be used as data mapper to a relational database. Twisted is a framework to program communications between computers, and is used (for example) by Dropbox.
+
+Libraries like NumPy, SciPy and Matplotlib allow the effective use of Python in scientific computing,[117][118] with specialized libraries such as Biopython and Astropy providing domain-specific functionality. SageMath is a mathematical software with a "notebook" programmable in Python: its library covers many aspects of mathematics, including algebra, combinatorics, numerical mathematics, number theory, and calculus. The Python language re-implemented in Java platform is used for numeric and statistical calculations with 2D/3D visualization by the DMelt project.[119][120]
+
+Python has been successfully embedded in many software products as a scripting language, including in finite element method software such as Abaqus, 3D parametric modeler like FreeCAD, 3D animation packages such as 3ds Max, Blender, Cinema 4D, Lightwave, Houdini, Maya, modo, MotionBuilder, Softimage, the visual effects compositor Nuke, 2D imaging programs like GIMP,[121] Inkscape, Scribus and Paint Shop Pro,[122] and musical notation programs like scorewriter and capella. GNU Debugger uses Python as a pretty printer to show complex structures such as C++ containers. Esri promotes Python as the best choice for writing scripts in ArcGIS.[123] It has also been used in several video games,[124][125] and has been adopted as first of the three available programming languages in Google App Engine, the other two being Java and Go.[126] Python is also used in algorithmic trading and quantitative finance.[127] Python can also be implemented in APIs of online brokerages that run on other languages by using wrappers.[128]
+
+Python has been used in artificial intelligence tasks.[129][130][131][132] As a scripting language with module architecture, simple syntax and rich text processing tools, Python is often used for natural language processing tasks.[133]
+
+Many operating systems include Python as a standard component; the language ships with most Linux distributions, AmigaOS 4, FreeBSD, NetBSD, OpenBSD and macOS, and can be used from the terminal. Many Linux distributions use installers written in Python: Ubuntu uses the Ubiquity installer, while Red Hat Linux and Fedora use the Anaconda installer. Gentoo Linux uses Python in its package management system, Portage.
+
+Python has also seen extensive use in the information security industry, including in exploit development.[134][135]
+
+Most of the Sugar software for the One Laptop per Child XO, now developed at Sugar Labs, is written in Python.[136]
+
+The Raspberry Pi single-board computer project has adopted Python as its main user-programming language.
+
+LibreOffice includes Python and intends to replace Java with Python. Python Scripting Provider is a core feature[137] since Version 4.0 from 7 February 2013.

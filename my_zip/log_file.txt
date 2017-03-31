@@ -1,0 +1,6 @@
+  adding: file1.txt (deflated 61%)
+  adding: file2.txt (deflated 62%)
+  adding: file3.txt (deflated 57%)
+  adding: file4.xml (deflated 69%)
+  adding: file5.xml (deflated 59%)
+  adding: file6.json (deflated 79%)
