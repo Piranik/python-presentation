@@ -19,7 +19,7 @@ def send_phones_email(phones, to):
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login("cdl.demo.python@gmail.com", "demopython")
+    server.login("email", "password")
 
     msg = MIMEText(body)
      
