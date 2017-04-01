@@ -1,26 +1,31 @@
 from bs4 import BeautifulSoup
 import requests
-# TODO 1: import the function for sending emails
+import re
+from my_email import send_phones_email
 
 
 if __name__ == '__main__':
     url = 'http://www.emag.ro/telefoane-mobile/brand/apple/c?path=telefoane-mobile%2Fbrand%2Fapple%2Fp1%2Fc&pc=40'
 
-    # TODO 2: execute GET request on url
+    price_matcher = re.compile(r'^([0-9]*\.[0-9]*) Lei')
 
-    # TODO 3: create a BeautifulSoup object based on the text from the request
+    req = requests.get()
 
-    # TODO 4: initialize phones list
+    bs = BeautifulSoup(req.text, 'html.parser')
 
-    # TODO 5: iterate over smartphone HTML elements
-    # Hint: look for divs with a class that has 'box' in its name
+    phones = []
 
-        # TODO 6: get name of smartphone
+    for form in bs.find_all('form', {'class': 'inner-form'}):
+        phone = {}
 
-        # TODO 7: get price of smartphone
+        name = form.find('div', {'class': 'middle-container'}).find('a').text.strip()
+        full_price = form.find('span', {'class': 'price-over'}).text.strip()
 
-        # TODO 8: create phone dictionary with name and price
+        price = price_matcher.match(full_price).group(1)
 
-        # TODO 9: append phone to the list
+        phone['name'] = name
+        phone['price'] = price
 
-    # TODO 10: send the email
+        phones.append(phone)
+
+    send_phones_email(phones, 'your email')
