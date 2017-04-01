@@ -26,4 +26,4 @@ if __name__ == '__main__':
 
         phones.append(phone)
 
-    send_phones_email(phones, 'monicamariabaluna@gmail.com')
+    send_phones_email(phones, 'your email')
